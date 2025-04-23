@@ -1,3 +1,4 @@
+export * from "./AboutProps";
 export * from "./Language";
 export * from "./Theme";
 export * from "./ThemeContextType";

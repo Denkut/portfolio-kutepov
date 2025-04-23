@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-background shadow-md text-black dark:text-foreground px-4 py-8 flex justify-between items-center">
       <a
-        href="/"
+        href="#home"
         className="flex items-center gap-3 text-lg font-bold text-primary transition duration-200 ease-in-out cursor-pointer"
       >
         <img

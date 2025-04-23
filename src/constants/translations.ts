@@ -1,8 +1,10 @@
 export const translations = {
   en: {
+    home: "Home",
     about: "About",
     projects: "Projects",
     contact: "Contact",
+    hobbies: "Hobbies",
     homeSection: {
       welcome: "Hi, I'm Denis Kutepov",
       role: "Frontend Developer",
@@ -126,16 +128,28 @@ export const translations = {
         },
       ],
     },
-    contactSection: {
-      title: "Contact Me",
-      description: "Feel free to reach out via email.",
+    hobbiesSection: {
+      title: "Musical Side",
+      description:
+        "I compose various music — from ambient to rock and fusion. I take part in concerts and festivals. I enjoy live sound and rich arrangements. Music helps me stay focused and creative.",
+      cta: "Listen on AudioJungle",
+    },
+    footerSection: {
+      title: "Let's connect",
       email: "denix.ru@yandex.ru",
+      resume: "Download Resume",
+      github: "GitHub",
+      telegram: "Telegram",
+      linkedin: "LinkedIn",
+      copyright: "© 2025 Denis Kutepov. All rights reserved.",
     },
   },
   ru: {
+    home: "Домой",
     about: "Обо мне",
     projects: "Проекты",
     contact: "Контакты",
+    hobbies: "Хобби",
     homeSection: {
       welcome: "Привет, я Денис Кутепов",
       role: "Frontend-разработчик",
@@ -259,10 +273,20 @@ export const translations = {
         },
       ],
     },
-    contactSection: {
-      title: "Связаться со мной",
-      description: "Не стесняйтесь писать мне на почту.",
+    hobbiesSection: {
+      title: "Музыкальные увлечения",
+      description:
+        "Пишу разную музыку — от эмбиента до рока и фьюжна. Выступаю на концертах и фестивалях. Люблю живое звучание и глубокие аранжировки. Музыка помогает мне балансировать фокус и креативность.",
+      cta: "Послушать на AudioJungle",
+    },
+    footerSection: {
+      title: "Давайте свяжемся",
       email: "denix.ru@yandex.ru",
+      resume: "Скачать резюме",
+      github: "Гитхаб",
+      telegram: "Телеграм",
+      linkedin: "Линкедин",
+      copyright: "© 2025 Денис Кутепов. Все права защищены.",
     },
   },
 } as const;

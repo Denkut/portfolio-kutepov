@@ -1,4 +1,4 @@
-import { Footer, Header, ScrollToTopButton } from "./components";
+import { Footer, Header, MusicToggle, ScrollToTopButton } from "./components";
 import { Home, About, Projects, Hobbies } from "./sections";
 import { LanguageProvider, ThemeProvider } from "./providers";
 
@@ -24,6 +24,7 @@ function App() {
             </section>
           </main>
           <Footer />
+          <MusicToggle />
         </div>
       </LanguageProvider>
     </ThemeProvider>

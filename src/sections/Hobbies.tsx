@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../context";
 import { translations } from "../constants";
-import musicCover from "../../public/covers/melancholy.jpg";
+// import musicCover from "../../public/covers/melancholy.jpg";
+import { AudioPlayer } from "../components";
 
 export const Hobbies = () => {
   const { language } = useLanguage();
@@ -33,20 +34,6 @@ export const Hobbies = () => {
           {t.description}
         </motion.p>
 
-        <motion.div
-          className="flex justify-center mb-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <img
-            src={musicCover}
-            alt="Music hobby cover"
-            className="w-full max-w-md rounded-xl shadow-xl object-cover"
-          />
-        </motion.div>
-
         <motion.a
           href="https://audiojungle.net/user/denkutm/portfolio"
           target="_blank"
@@ -56,6 +43,15 @@ export const Hobbies = () => {
         >
           {t.cta}
         </motion.a>
+        <motion.div
+          className="mt-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <AudioPlayer />
+        </motion.div>
       </div>
     </section>
   );

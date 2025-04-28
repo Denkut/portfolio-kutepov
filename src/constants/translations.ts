@@ -86,46 +86,6 @@ export const translations = {
           tech: ["React", "Redux", "TypeScript", "Tailwind"],
           link: "https://github.com/Denkut/kutepova",
         },
-        {
-          id: "1",
-          name: "1",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
-        {
-          id: "2",
-          name: "2",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
-        {
-          id: "3",
-          name: "3",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
-        {
-          id: "4",
-          name: "4",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
       ],
     },
     hobbiesSection: {
@@ -224,46 +184,6 @@ export const translations = {
         {
           id: "kutepova",
           name: "Kutepova",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
-        {
-          id: "1",
-          name: "1",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
-        {
-          id: "2",
-          name: "2",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
-        {
-          id: "3",
-          name: "3",
-          description: {
-            en: "A personal site for a gynecologist-sexologist built with React.",
-            ru: "Персональный сайт для гинеколога-сексолога на React.",
-          },
-          tech: ["React", "Redux", "TypeScript", "Tailwind"],
-          link: "https://github.com/Denkut/kutepova",
-        },
-        {
-          id: "4",
-          name: "4",
           description: {
             en: "A personal site for a gynecologist-sexologist built with React.",
             ru: "Персональный сайт для гинеколога-сексолога на React.",

@@ -45,7 +45,7 @@ export const Projects = () => {
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="bg-muted px-2 py-1 rounded-full dark:bg-zinc-700"
+                    className="bg-primary text-white px-2 py-1 rounded-full dark:bg-zinc-700"
                   >
                     {tech}
                   </span>

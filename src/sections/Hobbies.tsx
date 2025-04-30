@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../context";
 import { translations } from "../constants";
-// import musicCover from "../../public/covers/melancholy.jpg";
 import { AudioPlayer } from "../components";
 
 export const Hobbies = () => {

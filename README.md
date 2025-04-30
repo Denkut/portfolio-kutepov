@@ -1,6 +1,6 @@
 # Hi, I'm Denis Kutepov 👋
 
-🎯 Frontend Developer with 6+ years of experience  
+🎯 Frontend Developer with 3+ years of experience  
 🛠️ React, TypeScript, Redux, Tailwind, Node.js  
 🎵 Musician • Hackathon Enthusiast • Clean Code Advocate
 

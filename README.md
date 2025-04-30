@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# Hi, I'm Denis Kutepov 👋
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎯 Frontend Developer with 6+ years of experience  
+🛠️ React, TypeScript, Redux, Tailwind, Node.js  
+🎵 Musician • Hackathon Enthusiast • Clean Code Advocate
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Tech Stack
 
-## Expanding the ESLint configuration
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178c6?logo=typescript&logoColor=white&style=flat)
+![Redux](https://img.shields.io/badge/-Redux-764abc?logo=redux&logoColor=white&style=flat)
+![Tailwind](https://img.shields.io/badge/-Tailwind-38bdf8?logo=tailwind-css&logoColor=white&style=flat)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🚀 Projects
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [Kutepova](https://github.com/Denkut/kutepova) — Personal website for a gynecologist-sexologist  
+- [UpFood](https://github.com/Denkut/UpFood) — Fullstack healthy food delivery app  
+- [News Reactify](https://github.com/Denkut/news-reactify) — Lightweight news feed app
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🎵 Music Hobby
+
+Check out my music:  
+🎧 [AudioJungle Portfolio](https://audiojungle.net/user/denkutm/portfolio)
+
+---
+
+## 📫 Let's Connect
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
+[![Telegram](https://img.shields.io/badge/-Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/yourusername)
+[![Gmail](https://img.shields.io/badge/-denix.ru@yandex.ru-D14836?style=flat&logo=gmail&logoColor=white)](mailto:denix.ru@yandex.ru)

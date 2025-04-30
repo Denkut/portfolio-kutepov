@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../context";
 import { translations } from "../constants";
-import avatar from "../assets/avatar.jpg";
+import avatar from "../assets/Avatar.jpg";
 
 export const Home = () => {
   const { language } = useLanguage();

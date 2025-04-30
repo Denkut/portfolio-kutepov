@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaMoon, FaSun, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import { useTheme, useLanguage } from "../context";
 import { translations } from "../constants";
-import avatar from "../assets/avatar.jpg";
+import avatar from "../assets/Avatar.jpg";
 
 export const Header = () => {
   const { theme, toggleTheme } = useTheme();

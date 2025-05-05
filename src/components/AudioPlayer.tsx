@@ -1,12 +1,13 @@
 import { useRef, useState, useEffect } from "react";
 import { FaPlay, FaPause, FaStepBackward, FaStepForward } from "react-icons/fa";
-import { tracks } from "../constants";
+import { tracks, eventBus } from "../constants";
 
 export const AudioPlayer = () => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [volume, setVolume] = useState(0.8);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const track = tracks[currentTrackIndex];
@@ -17,24 +18,34 @@ export const AudioPlayer = () => {
     return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
   };
 
+  const notifyBackground = (playing: boolean) => {
+    eventBus.dispatchEvent(
+      new CustomEvent("playlist-play", { detail: playing })
+    );
+  };
+
   const togglePlay = () => {
     if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
+    const next = !isPlaying;
+    setIsPlaying(next);
+    if (next) {
       audioRef.current.play();
+    } else {
+      audioRef.current.pause();
     }
-    setIsPlaying(!isPlaying);
+    notifyBackground(next);
   };
 
   const nextTrack = () => {
     setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
     setIsPlaying(true);
+    notifyBackground(true);
   };
 
   const prevTrack = () => {
     setCurrentTrackIndex((prev) => (prev === 0 ? tracks.length - 1 : prev - 1));
     setIsPlaying(true);
+    notifyBackground(true);
   };
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -48,6 +59,8 @@ export const AudioPlayer = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
+
+    audio.volume = volume;
 
     const updateProgress = () => {
       setProgress(audio.currentTime);
@@ -66,24 +79,29 @@ export const AudioPlayer = () => {
       audio.removeEventListener("loadedmetadata", setAudioData);
       audio.removeEventListener("ended", nextTrack);
     };
-  }, [currentTrackIndex]);
+  }, [currentTrackIndex, nextTrack, volume]);
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.load();
-      if (isPlaying) {
-        audioRef.current.play().catch(() => {});
-      }
+      audioRef.current.volume = volume;
+      if (isPlaying) audioRef.current.play().catch(() => {});
     }
   }, [currentTrackIndex, isPlaying]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
 
   return (
     <div className="w-full max-w-md mx-auto bg-white dark:bg-zinc-800 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-6 text-center">
       <img
-        src={track.cover}
+        src={import.meta.env.BASE_URL + track.cover}
         alt={track.title}
-        className="w-full h-52 object-cover rounded-lg"
+        className="w-full h-52 object-contain rounded-lg transform scale-95"
       />
       <div className="space-y-1">
         <h3 className="text-xl font-semibold">{track.title}</h3>
@@ -108,7 +126,7 @@ export const AudioPlayer = () => {
       <div className="flex justify-center items-center gap-6 mt-4">
         <button
           onClick={prevTrack}
-          className="text-primary hover:text-primary/80 transition "
+          className="text-primary hover:text-primary/80 transition"
           aria-label="Previous Track"
         >
           <FaStepBackward size={24} />
@@ -131,7 +149,27 @@ export const AudioPlayer = () => {
         </button>
       </div>
 
-      <audio ref={audioRef} preload="metadata" src={track.src} />
+      <div className="flex items-center justify-center gap-2">
+        <label htmlFor="volume" className="text-sm ">
+          Vol
+        </label>
+        <input
+          id="volume"
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value={volume}
+          onChange={(e) => setVolume(parseFloat(e.target.value))}
+          className="w-32 text-primary hover:text-primary/80 transition"
+        />
+      </div>
+
+      <audio
+        ref={audioRef}
+        preload="metadata"
+        src={import.meta.env.BASE_URL + track.src}
+      />
     </div>
   );
 };

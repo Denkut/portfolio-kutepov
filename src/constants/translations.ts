@@ -14,18 +14,18 @@ export const translations = {
     aboutSection: {
       title: "About Me",
       description: `
-        I’m a frontend developer with over 6 years of experience. 
-        Currently building an integrated modeling module at Lukoil Engineering. 
-        I enjoy solving complex problems and creating smooth user experiences with React, TypeScript, and Tailwind.
-        
-        Previously I built fullstack apps with Node.js and MongoDB. 
-        I love hackathons and continually strive to learn new technologies and tools.
+        I am a frontend developer with 3 years of comercial experience. 
+ I am currently working on a graphical module for integrated modeling at LUKOIL Engineering (since 2024).
+ I like to solve complex problems and create user-friendly interfaces using React, TypeScript and Tailwind.
+ 
+ Created fullstack applications on Node.js . 
+ I have participated in hackathons and am constantly exploring new technologies and approaches.
       `,
     },
     timeline: [
       {
-        year: "2023–2024",
-        title: "Lukoil Engineering",
+        year: "2024–Present",
+        title: "LUKIOL Engineering",
         role: "Frontend Developer",
         description:
           "Developed integrated modeling tools using React, TypeScript, Tailwind, SVG, and advanced UI logic.",
@@ -119,17 +119,17 @@ export const translations = {
     aboutSection: {
       title: "Обо мне",
       description: `
-        Я фронтенд-разработчик с более чем 6-летним опытом. 
-        Сейчас работаю над графическим модулем интегрированного моделирования в ЛУКОЙЛ-Инжиниринг.
+        Я фронтенд-разработчик с 3-летним коммерческим опытом. 
+        С 2024 года работаю над графическим модулем интегрированного моделирования в ЛУКОЙЛ-Инжиниринг.
         Люблю решать сложные задачи и создавать удобные интерфейсы с использованием React, TypeScript и Tailwind.
         
-        Ранее создавал fullstack-приложения на Node.js и MongoDB. 
+        Создавал fullstack-приложения на Node.js. 
         Участвовал в хакатонах и постоянно изучаю новые технологии и подходы.
       `,
     },
     timeline: [
       {
-        year: "2023–2024",
+        year: "2024–настоящее время",
         title: "ЛУКОЙЛ-Инжиниринг",
         role: "Frontend-разработчик",
         description:

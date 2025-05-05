@@ -21,7 +21,7 @@ export const Footer = () => {
 
         <div className="flex-1">
           <a
-            href="/resume.pdf"
+            href={import.meta.env.BASE_URL + "resume.pdf"}
             download
             className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary text-white dark:text-black text-sm font-medium rounded-full shadow-md hover:bg-opacity-90 transition"
           >

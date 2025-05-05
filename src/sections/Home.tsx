@@ -49,7 +49,7 @@ export const Home = () => {
       </motion.p>
 
       <motion.a
-        href="/resume.pdf"
+        href={import.meta.env.BASE_URL + "resume.pdf"}
         download
         className="inline-block px-6 py-2 bg-primary text-white dark:text-black font-medium rounded-full shadow-md hover:bg-opacity-90 transition"
         initial={{ opacity: 0 }}

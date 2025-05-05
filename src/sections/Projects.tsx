@@ -9,11 +9,11 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 md:py-32 bg-zinc-50 dark:bg-zinc-900"
+      className="w-full min-h-screen px-4 py-20 flex flex-col items-center justify-center text-center bg-white dark:bg-background"
     >
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-primary mb-12"
+          className="text-3xl md:text-4xl font-bold text-primary mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

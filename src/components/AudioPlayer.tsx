@@ -1,4 +1,5 @@
-import { useRef, useState, useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useRef, useState, useEffect, useCallback } from "react";
 import { FaPlay, FaPause, FaStepBackward, FaStepForward } from "react-icons/fa";
 import { tracks, eventBus } from "../constants";
 
@@ -8,6 +9,7 @@ export const AudioPlayer = () => {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(0.8);
+  const [showVolumeBubble, setShowVolumeBubble] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const track = tracks[currentTrackIndex];
@@ -36,11 +38,11 @@ export const AudioPlayer = () => {
     notifyBackground(next);
   };
 
-  const nextTrack = () => {
+  const nextTrack = useCallback(() => {
     setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
     setIsPlaying(true);
     notifyBackground(true);
-  };
+  }, []);
 
   const prevTrack = () => {
     setCurrentTrackIndex((prev) => (prev === 0 ? tracks.length - 1 : prev - 1));
@@ -98,11 +100,18 @@ export const AudioPlayer = () => {
 
   return (
     <div className="w-full max-w-md mx-auto bg-white dark:bg-zinc-800 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-6 text-center">
+      <audio
+        ref={audioRef}
+        src={import.meta.env.BASE_URL + track.src}
+        preload="metadata"
+      />
+
       <img
         src={import.meta.env.BASE_URL + track.cover}
         alt={track.title}
         className="w-full h-52 object-contain rounded-lg transform scale-95"
       />
+
       <div className="space-y-1">
         <h3 className="text-xl font-semibold">{track.title}</h3>
         <p className="text-sm text-muted-foreground">{track.artist}</p>
@@ -149,27 +158,43 @@ export const AudioPlayer = () => {
         </button>
       </div>
 
-      <div className="flex items-center justify-center gap-2">
-        <label htmlFor="volume" className="text-sm ">
+      <div className="flex items-center justify-center gap-2 relative group">
+        <label htmlFor="volume" className="text-sm">
           Vol
         </label>
-        <input
-          id="volume"
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value={volume}
-          onChange={(e) => setVolume(parseFloat(e.target.value))}
-          className="w-32 text-primary hover:text-primary/80 transition"
-        />
-      </div>
 
-      <audio
-        ref={audioRef}
-        preload="metadata"
-        src={import.meta.env.BASE_URL + track.src}
-      />
+        <div className="relative w-32 md:w-40">
+          <input
+            id="volume"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={(e) => setVolume(parseFloat(e.target.value))}
+            onMouseDown={() => setShowVolumeBubble(true)}
+            onMouseUp={() => setShowVolumeBubble(false)}
+            onTouchStart={() => setShowVolumeBubble(true)}
+            onTouchEnd={() => setShowVolumeBubble(false)}
+            className="w-full appearance-none cursor-pointer bg-transparent [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-primary [&::-moz-range-thumb]:shadow-md"
+            style={
+              {
+                "--vol": volume.toString(),
+              } as React.CSSProperties
+            }
+          />
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-zinc-400 dark:bg-zinc-600 rounded-full pointer-events-none" />
+          <div
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-primary rounded-full pointer-events-none"
+            style={{ width: `${volume * 100}%` }}
+          />
+          {showVolumeBubble && (
+            <div className="absolute -top-7 left-[calc(var(--vol)*100%)] transform -translate-x-1/2 bg-primary text-white text-xs rounded px-2 py-1 transition-all">
+              {Math.round(volume * 100)}%
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

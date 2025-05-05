@@ -6,7 +6,7 @@ export const tracks = [
     src: "/audio/Flight_of_dreams.mp3",
   },
   {
-    title: "New year(cover Modern talking)",
+    title: "New Year(cover Modern talking)",
     artist: "Denis Kutepov",
     cover: "/covers/New_year(cover_Modern_talking).jpg",
     src: "/audio/New_year(cover_Modern_talking).mp3",
@@ -31,19 +31,19 @@ export const tracks = [
   },
   {
     title: "The Wind of Change",
-    artist: "INTRO",
+    artist: "INTRO & Denis Kutepov",
     cover: "/covers/The_Wind_of_Change.jpg",
     src: "/audio/The_Wind_of_Change.mp3",
   },
   {
     title: "8",
-    artist: "Namusura",
+    artist: "Namusura & Denis Kutepov",
     cover: "/covers/8.jpg",
     src: "/audio/8.mp3",
   },
   {
     title: "Torn",
-    artist: "Daria",
+    artist: "Daria & Denis Kutepov",
     cover: "/covers/Torn.jpg",
     src: "/audio/Torn.mp3",
   },

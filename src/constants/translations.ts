@@ -78,7 +78,7 @@ export const translations = {
         },
         {
           id: "kutepova",
-          name: "Kutepova",
+          name: "Doctor's personal website",
           description: {
             en: "A personal site for a gynecologist-sexologist built with React.",
             ru: "Персональный сайт для гинеколога-сексолога на React.",
@@ -183,7 +183,7 @@ export const translations = {
         },
         {
           id: "kutepova",
-          name: "Kutepova",
+          name: "Личный сайт врача",
           description: {
             en: "A personal site for a gynecologist-sexologist built with React.",
             ru: "Персональный сайт для гинеколога-сексолога на React.",

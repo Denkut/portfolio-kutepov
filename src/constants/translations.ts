@@ -68,7 +68,7 @@ export const translations = {
         },
         {
           id: "news",
-          name: "News Reactify",
+          name: "News",
           description: {
             en: "A news feed project using React and modern frontend tooling.",
             ru: "Новостной сервис на React с современным фронтендом.",
@@ -173,7 +173,7 @@ export const translations = {
         },
         {
           id: "news",
-          name: "News Reactify",
+          name: "News",
           description: {
             en: "A news feed project using React and modern frontend tooling.",
             ru: "Новостной сервис на React с современным фронтендом.",

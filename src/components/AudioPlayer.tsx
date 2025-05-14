@@ -204,7 +204,7 @@ export const AudioPlayer = () => {
         </span>
       </div>
 
-      <div className="flex items-center justify-center gap-2 relative group">
+      <div className="hidden md:flex items-center justify-center gap-2 relative group">
         <label htmlFor="volume" className="text-sm">
           Vol
         </label>

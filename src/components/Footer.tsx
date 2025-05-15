@@ -41,7 +41,7 @@ export const Footer = () => {
             <FaGithub className="text-xl text-primary" />
           </a>
           <a
-            href="https://t.me/yourusername"
+            href="https://t.me/DenKutM"
             target="_blank"
             rel="noopener noreferrer"
             className="transition hover:scale-110"

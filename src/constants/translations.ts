@@ -14,12 +14,14 @@ export const translations = {
     aboutSection: {
       title: "About Me",
       description: `
-        I am a frontend developer with 3 years of comercial experience. 
- I am currently working on a graphical module for integrated modeling at LUKOIL Engineering (since 2024).
- I like to solve complex problems and create user-friendly interfaces using React, TypeScript and Tailwind.
- 
- Created fullstack applications on Node.js . 
- I have participated in hackathons and am constantly exploring new technologies and approaches.
+       I am a frontend developer with 3 years of commercial experience.
+       
+Since 2024, I have been developing a flowchart module for an integrated modeling system at LUKOIL Engineering — an internal counterpart to the tNavigator software suite.
+My main focus is building a modern, intuitive, and high-performance interface for complex engineering processes. I work with a tech stack that includes React, TypeScript, and Tailwind CSS, with particular attention to UX, code readability, and performance.
+
+Previously, I developed fullstack applications using Node.js, participated in hackathons, and continuously explore modern technologies and development practices.
+
+In my free time, I enjoy making music and staying active through sports(chess, table-tennis, voleyball).
       `,
     },
     timeline: [
@@ -100,7 +102,6 @@ export const translations = {
       resume: "Download Resume",
       github: "GitHub",
       telegram: "Telegram",
-      linkedin: "LinkedIn",
       copyright: "© 2025 Denis Kutepov. All rights reserved.",
     },
   },
@@ -120,11 +121,13 @@ export const translations = {
       title: "Обо мне",
       description: `
         Я фронтенд-разработчик с 3-летним коммерческим опытом. 
-        С 2024 года работаю над графическим модулем интегрированного моделирования в ЛУКОЙЛ-Инжиниринг.
-        Люблю решать сложные задачи и создавать удобные интерфейсы с использованием React, TypeScript и Tailwind.
         
-        Создавал fullstack-приложения на Node.js. 
-        Участвовал в хакатонах и постоянно изучаю новые технологии и подходы.
+        С 2024 года разрабатываю модуль схем для системы интегрированного моделирования в ЛУКОЙЛ-Инжиниринг — аналог программного комплекса tNavigator.
+        Моя основная задача: создание современного, удобного и производительного интерфейса для сложных инженерных процессов. В своей работе использую стек: React, TypeScript, Tailwind CSS, уделяя особое внимание UX, читаемости кода и производительности.
+       
+        До этого разрабатывал fullstack-приложения с использованием Node.js, участвовал в хакатонах и постоянно изучаю современные технологии и подходы к разработке.
+       
+        В свободное от работы время занимаюсь музыкой и спортом(шахматы, настольный-теннис, волейбол).
       `,
     },
     timeline: [
@@ -205,7 +208,6 @@ export const translations = {
       resume: "Скачать резюме",
       github: "Гитхаб",
       telegram: "Телеграм",
-      linkedin: "Линкедин",
       copyright: "© 2025 Денис Кутепов. Все права защищены.",
     },
   },

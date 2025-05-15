@@ -1,4 +1,4 @@
-import { FaGithub, FaTelegramPlane, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaTelegramPlane } from "react-icons/fa";
 import { HiOutlineDownload } from "react-icons/hi";
 import { useLanguage } from "../context";
 import { translations } from "../constants";
@@ -48,15 +48,6 @@ export const Footer = () => {
             aria-label="Telegram"
           >
             <FaTelegramPlane className="text-xl text-primary" />
-          </a>
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition hover:scale-110"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin className="text-xl text-primary" />
           </a>
         </div>
       </div>

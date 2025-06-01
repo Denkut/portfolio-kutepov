@@ -5,6 +5,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "/Portfolio-KutepovDM/",
   plugins: [react()],
+  resolve: {
+    alias: {
+      "rollup/dist/native": "rollup/dist/es/rollup.js",
+    },
+  },
   server: {
     port: 3006,
   },

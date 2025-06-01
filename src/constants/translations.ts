@@ -5,6 +5,7 @@ export const translations = {
     projects: "Projects",
     contact: "Contact",
     hobbies: "Hobbies",
+    spotify: "Spotify",
     homeSection: {
       welcome: "Hi, I'm Denis Kutepov",
       role: "Frontend Developer",
@@ -96,6 +97,16 @@ In my free time, I enjoy making music and staying active through sports(chess, t
         "I compose various music — from ambient to rock and fusion. I take part in concerts and festivals. I enjoy live sound and rich arrangements. Music helps me stay focused and creative.",
       cta: "Listen on AudioJungle",
     },
+    spotifySection: {
+      title: "Spotify",
+      name: "Spotify Popularity",
+      cta: "Top Tracks Popularity",
+      buttonSearch: "Search",
+      nameAlbum: "Albums by",
+      cardReleased: "Released",
+      cardTracks: "Tracks",
+      cardPopularity: "Popularity",
+    },
     footerSection: {
       title: "Let's connect",
       email: "denix.ru@yandex.ru",
@@ -111,6 +122,7 @@ In my free time, I enjoy making music and staying active through sports(chess, t
     projects: "Проекты",
     contact: "Контакты",
     hobbies: "Хобби",
+    spotify: "Спотифай",
     homeSection: {
       welcome: "Привет, я Денис Кутепов",
       role: "Frontend-разработчик",
@@ -201,6 +213,16 @@ In my free time, I enjoy making music and staying active through sports(chess, t
       description:
         "Пишу разную музыку — от эмбиента до рока и фьюжна. Выступаю на концертах и фестивалях. Люблю живое звучание и глубокие аранжировки. Музыка помогает мне балансировать фокус и креативность.",
       cta: "Послушать на AudioJungle",
+    },
+    spotifySection: {
+      title: "Спотифай",
+      name: "Популярность на Spotify",
+      cta: "Самые популярные треки",
+      buttonSearch: "Поиск",
+      nameAlbum: "Альбомы",
+      cardReleased: "Релиз",
+      cardTracks: "Треки",
+      cardPopularity: "Популярность",
     },
     footerSection: {
       title: "Давайте свяжемся",

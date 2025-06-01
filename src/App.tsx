@@ -1,5 +1,5 @@
 import { Footer, Header, MusicToggle, ScrollToTopButton } from "./components";
-import { Home, About, Projects, Hobbies } from "./sections";
+import { Home, About, Projects, Hobbies, Spotify } from "./sections";
 import { LanguageProvider, ThemeProvider } from "./providers";
 
 function App() {
@@ -21,6 +21,9 @@ function App() {
             </section>
             <section id="hobbies">
               <Hobbies />
+            </section>
+            <section id="spotify">
+              <Spotify />
             </section>
           </main>
           <Footer />

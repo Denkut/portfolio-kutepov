@@ -50,6 +50,12 @@ export const Header = () => {
         >
           {translation.hobbies}
         </a>
+        <a
+          href="#spotify"
+          className="hover:text-primary transition duration-200 ease-in-out cursor-pointer"
+        >
+          {translation.spotify}
+        </a>
 
         <button
           onClick={toggleTheme}
@@ -115,6 +121,13 @@ export const Header = () => {
             className="hover:text-primary transition duration-200 ease-in-out cursor-pointer"
           >
             {translation.hobbies}
+          </a>
+          <a
+            href="#spotify"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-primary transition duration-200 ease-in-out cursor-pointer"
+          >
+            {translation.spotify}
           </a>
         </div>
       )}
